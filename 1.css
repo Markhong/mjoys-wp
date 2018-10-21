@@ -57,3 +57,14 @@ li.fix-click:not(.menu-coporation) a:hover:after {
     background-position: center;
     height: 500px;
 }
+.banner-bigdatamarketing h1 {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 120px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.banner-bigdatamarketing p {
+    font-size: 22px;
+    color: #fff;
+}
