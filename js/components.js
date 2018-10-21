@@ -50,6 +50,29 @@ $(function(){
             ifmobile = !0;
             break
         }
+    
+    $("#from-quanyutong").submit(function(){
+        var data = {};
+        data.tel = $('#tel').val();
+        data.action = "quanyutong_action";
+        //$.post('http://www.mjoys.com/wp-admin/admin-ajax.php',data, onSuccess);
+        $(this).find('[type="submit"]').attr('disabled', 'disabled');
+        $.ajax({
+            url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
+            data: data,
+            type: "POST",
+            beforeSend: function () {
+            },
+            error: function (request) {
+            },
+            success: function (data) {
+                setTimeout(function(){
+                    window.location.href = '/signup/success/';
+                }, 500);
+            }
+        });
+        return false;
+    });   
     /*
     if(ifmobile){
         $(".menu-item-has-children > a").on("click",function(){

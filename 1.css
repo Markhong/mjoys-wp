@@ -242,7 +242,7 @@ li.fix-click:not(.menu-coporation) a:hover:after {
 #from-quanyutong {
     font-size: 14px;
 }
-#from-quanyutong input[type='text'] {
+#from-quanyutong input[type='tel'] {
     background: #fff;
     border-radius: 4px;
     font-size: 14px;
