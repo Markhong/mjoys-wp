@@ -1,6 +1,25 @@
+h2 {
+    margin-bottom: 18px;
+}
+.content-box {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.content-box--lightblue {
+    background: #e3f4fb;
+}
+.content-box .title {
+    margin-bottom: 18px;
+}
 .nav-main {
     border-bottom: 1px solid #dbdbdb;
-    background: transparent!important;
+    background: #1685b8!important;
+}
+@media screen and (max-width: 767px) {
+    .nav-main {
+        border-bottom: none;
+        background: #169bce!important;
+    }
 }
 @media screen and (min-width: 768px) {
     #dropdownmenu-menu > .childmenu-active:not(.menu-coporation)>a:after {
@@ -56,15 +75,191 @@ li.fix-click:not(.menu-coporation) a:hover:after {
     background-size: cover;
     background-position: center;
     height: 500px;
+    margin-top: 67px;
+}
+@media screen and (max-width: 767px) {
+    .banner-bigdatamarketing {
+        margin-top: 47px;
+    }
 }
 .banner-bigdatamarketing h1 {
     color: #fff;
-    font-size: 40px;
-    margin-top: 120px;
+    font-size: 50px;
+    margin-top: 95px;
     margin-bottom: 20px;
     text-align: left;
+}
+@media screen and (max-width: 767px) {
+    .banner-bigdatamarketing h1 {
+        margin-top: 0;
+        font-size: 32px;
+        padding-top: 75px;
+    }
 }
 .banner-bigdatamarketing p {
     font-size: 22px;
     color: #fff;
+    letter-spacing: 10px;
+}
+.banner-bigdatamarketing .btn {
+    border-radius: 30px;
+    width: 180px;
+    margin-top: 45px;
+}
+.marketing-box .title {
+    margin-top: 0;
+}
+.deep-mining-list {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.deep-mining-list__title {
+    color: #28a5e8;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+.deep-mining-list__btn a {
+    border: 1px solid #28a5e8;
+    border-radius: 4px;
+    display: block;
+    width: 210px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    color: #28a5e8;
+}
+.deep-mining-list__btn a:hover {
+    background: #28a5e8;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.25s linear;
+}
+.deep-mining-trial a {
+    background: #28a5e8;
+    color: #fff;
+    height: 34px;
+    line-height: 34px;
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 4px;
+}
+.deep-mining-trial a:hover {
+    background: #73ceff;
+}
+.icon-content-list {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.icon-content-list__icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    background: #28a2e4;
+    border-radius: 100%;
+    text-align: center;
+}
+.icon-content-list:hover .icon-content-list__icon {
+    background: #73ceff;
+    transition: background 0.25s linear;
+}
+.icon-content-list__icon img {
+    width: 47px;
+}
+.icon-content-list__icon--mail img {
+    margin-top: 25px;
+}
+.icon-content-list__icon--cloud img {
+    margin-top: 28px;
+}
+.icon-content-list__icon--tel img {
+    margin-top: 23px;
+}
+.icon-content-list__icon--cost img {
+    margin-top: 20px;
+}
+.icon-content-list__icon--secure img {
+    margin-top: 20px;
+}
+.icon-content-list__icon--person img {
+    margin-top: 25px;
+}
+.icon-content-list__icon--tel-filter img {
+    margin-top: 25px;
+}
+.icon-content-list__icon--edit img {
+    margin-top: 22px;
+}
+.icon-content-list__title {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-top: 12px;
+    margin-bottom: 10px;
+}
+.steps-cloudcall__title {
+    color: #28a2e4;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 110px;
+}
+.steps-cloudcall__title span {
+    font-size: 32px;
+}
+.steps-cloudcall__content {
+    font-size: 14px;
+}
+.step1to2 {
+    position: absolute;
+    top: 240px;
+    left: -210px;
+    z-index: 9;
+}
+.step2to3 {
+    position: absolute;
+    right: -224px;
+    bottom: -80px;
+    z-index: 9;
+}
+.content-box--calltoaction {
+    background-color: #28a2e4;
+    color: #fff;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.content-box--calltoaction h3 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+#from-quanyutong {
+    font-size: 14px;
+}
+#from-quanyutong input[type='text'] {
+    background: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 246px;
+}
+#from-quanyutong button {
+    margin-top: 60px;
+    width: 300px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #fff;
+    background: rgba(255,255,255,.3);
+    border-radius: 4px;
+    cursor: pointer;
+}
+#from-quanyutong button:hover {
+    background: rgba(255,255,255,.1);
 }
