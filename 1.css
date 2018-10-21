@@ -1,0 +1,59 @@
+.nav-main {
+    border-bottom: 1px solid #dbdbdb;
+    background: transparent!important;
+}
+@media screen and (min-width: 768px) {
+    #dropdownmenu-menu > .childmenu-active:not(.menu-coporation)>a:after {
+        content: "";
+        position: absolute;
+        top: auto;
+        bottom: 3px;
+        left: 50%;
+        display: block;
+        width: 12px;
+        height: 2px;
+        background: #fff;
+        margin-left: -6px;
+    }
+}
+.navbar-nav li:not(.menu-coporation)>a:hover:after, 
+/* .navbar-nav .has-third-level-menu .dropdown-menu li>a:after,  */
+/* .navbar-nav .has-lower-level-menu li>a:after,  */
+/* .navbar-nav .dropdown-menu li>a:after,  */
+.navbar-nav .dropdown-menu li:not(.menu-coporation)>a:hover:after, 
+.navbar-nav .has-lower-level-menu li:not(.menu-coporation)>a:hover:after, 
+li.fix-click:not(.menu-coporation) a:hover:after {
+    content: "";
+    width: 12px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    background: #fff;
+    z-index: 10000;
+    margin-left: -6px;
+}
+.navbar-nav>ul>li>a {
+    padding: 36px 28px 6px;
+}
+#dropdownmenu-menu .menu-item-has-children.childmenu-active > a, #dropdownmenu-menu .childmenu-active > a{
+    color: #fff;
+}
+.navbar-nav > ul > li.menu-coporation {
+    margin-top: 32px;
+}
+.navbar-nav > ul > li.menu-coporation a {
+    background: rgba(255,255,255,.3);
+    color: #fff;
+    padding: 2px 20px;
+    border: 1px solid #fff;
+}
+.nav-main--fixed {
+    background: rgba(51, 51, 51, .9)!important;
+}
+.banner-bigdatamarketing {
+    background: url(./images/qyt_img.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+}
