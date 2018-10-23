@@ -4190,10 +4190,11 @@ box-sizing: border-box;
 	background-position: center 186px;
 }
 .banner-wrap .signup-banner{
-	background-image: url('http://static.mxassets.com/mjoys/img/banner-signup-wide.png');
+	background-image: url('./images/banner_signup.png');
 	background-color: #323841;
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-position: center;
 }
 .banner-wrap .banner-404{
 	background-image: url('http://static.mxassets.com/mjoys/img/banner-signup-wide.png');
@@ -13216,7 +13217,8 @@ a.landing_contactQQ {
 .signup-banner-wrap{
 	position: relative;
 }
-.page-container-signup .banner-title, .page-container-signup .banner-title-bg{
+.page-container-signup .banner-title, .page-container-signup .banner-title-bg,
+.page-container-signup .banner-desc {
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -13228,8 +13230,15 @@ a.landing_contactQQ {
 .page-container-signup .banner-title{
 	line-height: 78px;
 	text-align: center;
-	font-size: 28px;
+	font-size: 36px;
 	color: #fff;
+}
+.page-container-signup .banner-desc{
+	text-align: center;
+	font-size: 18px;
+	color: #fff;
+	letter-spacing: 5px;
+	margin-top: 36px;
 }
 .page-container-signup .banner-title-bg{
 	background: -moz-linear-gradient(left, transparent, #000, transparent);
@@ -13283,10 +13292,11 @@ a.landing_contactQQ {
 	position: relative;
 	background: url(/wp-content/uploads/ball.png) #fff right bottom no-repeat;
 	background-size: 225px;
-	border-left: 4px solid #76b0f9;
+	/* border-left: 4px solid #76b0f9; */
+	border-radius: 10px;
 }
 .box-form, .box-back {
-	width: calc(100% - 16px);
+	/* width: calc(100% - 16px); */
 	/*height: 625px;*/
 	padding-bottom: 80px;
 	box-shadow: 0px 2px 9px 0px rgba(14, 10, 9, 0.2);

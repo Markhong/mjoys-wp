@@ -458,7 +458,7 @@ function quanyutong_action(){
     $landingpage = $_COOKIE['landingUrl'];
     $today = date("Y-m-d");
 
-    $myfile = $myfile = fopen(get_template_directory() . "/txt/quanyutong_form.txt", "a") or die("Unable to open file!");
+    $myfile = $myfile = fopen(get_template_directory() . "/txt/corporation_form.txt", "a") or die("Unable to open file!");
 
     $txt = "电话：" . $tel . "," . $refererURL . "," . $c_cid . "," . $landingpage . "," . $today . ";\r\n";
     fwrite($myfile, $txt);
