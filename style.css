@@ -1842,6 +1842,9 @@ hr {
 .mt0 {
 	margin-top: 0 !important
 }
+.mt5 {
+	margin-top: 5px;
+}
 .mt10 {
 	margin-top: 10px;
 }
@@ -1856,6 +1859,9 @@ hr {
 }
 .mt60 {
 	margin-top: 60px
+}
+.mt80 {
+	margin-top: 80px
 }
 .mt95{
 	margin-top: 95px!important
@@ -13290,8 +13296,9 @@ a.landing_contactQQ {
 }
 .box-form {
 	position: relative;
-	background: url(/wp-content/uploads/ball.png) #fff right bottom no-repeat;
-	background-size: 225px;
+	background: #fff;
+	/* background: url(/wp-content/uploads/ball.png) #fff right bottom no-repeat; */
+	/* background-size: 225px; */
 	/* border-left: 4px solid #76b0f9; */
 	border-radius: 10px;
 }
@@ -13309,7 +13316,10 @@ a.landing_contactQQ {
 	font-weight: normal;
 	margin-left: 46px;
 }
-.box-form h5:before {
+.box-form h5 span {
+	font-size: 14px;
+}
+/* .box-form h5:before {
 	position: absolute;
 	left: -12px;
 	top: 34px;
@@ -13327,14 +13337,14 @@ a.landing_contactQQ {
 	height: 1px;
 	background-color: #ebebeb;
 	margin-bottom: 16px;
-}
+} */
 .signup-box .form-row {
 	padding-left: 50px;
-	margin-bottom: 24px;
+	margin-bottom: 16px;
 
 }
 .signup-box .form-row.inline {
-	display: inline-block;
+	display: flex;
 }
 .signup-box .form-row input {
 	max-width: 80%;
@@ -13361,21 +13371,25 @@ a.landing_contactQQ {
 #formcoporation button {
 	display: block;
 	position: relative;
-	width: 224px;
-	height: 40px;
-	background-color: #76b0f9;
+	width: 242px;
+	height: 34px;
+	line-height: 34px;
+	background-color: #28a5e8;
 	padding: 0;
-	margin: 160px auto 0;
+	margin: 60px auto 0;
 	outline: none;
 	border: none;
 	color: #fff;
 	font-size: 14px;
-	line-height: 40px;
 	cursor: pointer;
 	transition: all .7s;
 	-webkit-transition: all .7s;
 	-moz-transition: all .7s;
 	overflow: hidden;
+	border-radius: 4px;
+}
+#formcoporation button:hover {
+    background: #73ceff;
 }
 #formcoporation button:after{
 	content: "";
@@ -13406,21 +13420,25 @@ a.landing_contactQQ {
 .signup-box .box-bg {
 	position: relative;
 	width: 100%;
-	height: 626px;
+	/* height: 626px; */
 	background-color: #fff;
-	padding-bottom: 80px;
+	padding-bottom: 120px;
 	box-shadow: 0px 2px 9px 0px rgba(14, 10, 9, 0.2);
 	color: #1e1b29;
 	text-align: center;
 }
 .signup-box .box-bg img {
 	margin-top: 112px;
-	max-width: 60%;
+	background: #3e9ee9;
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    padding: 12px;
 }
 .signup-box .box-bg p {
 	font-size: 24px;
-	color: #777d91;
-	margin-top: 40px;
+	color: #333;
+	margin-top: 20px;
 }
 .banner-img-404 {
 	width: 100%;
@@ -13522,4 +13540,63 @@ a.landing_contactQQ {
 		background-image: url(/wp-content/uploads/banner-contact-s.png);
 	}
 }
-
+.box-form__img {
+    margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+	.box-form__img {
+		width: calc(50% - 60px);
+		float: left;
+		margin-left: 60px;
+	}
+	#formcoporation {
+		float: left;
+		width: 50%;
+	}
+}
+.signup-box .form-row label {
+	position: relative;
+	font-size: 14px;
+	letter-spacing: 6px;
+    width: 80px;
+    display: inline-block;
+    text-align: right;
+}
+.signup-box .form-row label.required:before {
+	content: '*';
+	color: red;
+	position: absolute;
+	left: -15px;
+	top: 3px;
+}
+.signup-box .form-row input[type=text],
+.signup-box .form-row textarea {
+	border: none;
+	background: #f8f8f8;
+	width: 200px;
+	font-size: 14px;
+    color: #000;
+}
+.box-bg__title {
+	color: #333;
+	font-size: 40px;
+	margin-top: 40px;
+}
+.signup-box .box-bg p span {
+	color: #ff4545;
+}
+.huoke-paint__title {
+	font-size: 18px;
+	color: #28A2E4;
+	margin-bottom: 12px;
+    font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+	.huoke-paint--3 {
+		margin-top: -60px;
+	}
+	.huoke-paint--3 img {
+		margin-top: -110px;
+    	margin-left: 55px;
+	}
+}

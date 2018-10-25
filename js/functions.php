@@ -320,14 +320,15 @@ function coporation_action(){
  $postCoporation = $_POST['coporation'];
     //record to txt
     $username = $_POST['username'];
-    $email = $_POST['email'];
+    // $email = $_POST['email'];
     $tel = $_POST['tel'];
-    $qq = $_POST['qq'];
-    $company = $_POST['company'];
-    $website = $_POST['website'];
+    // $qq = $_POST['qq'];
+    // $company = $_POST['company'];
+    // $website = $_POST['website'];
     $coporation = $coporationArr[$postCoporation];
-    $other = $_POST['other'];
-    $href = $_POST['location'];
+    // $other = $_POST['other'];
+    // $href = $_POST['location'];
+    $beizhu = $_POST['beizhu'];
     $myfile = $myfile = fopen(get_template_directory() . "/txt/corporation_form.txt", "a") or die("Unable to open file!");
     $refererURL = $_COOKIE['R_url'];
     $webRef = $_HEADER['Referer'];
@@ -339,7 +340,7 @@ function coporation_action(){
     // $mailtosalessubject = "";
 
    
-    $txt = $today . ",姓名：" .$username . ",邮箱：" . $email . ",联系电话：" . $tel . "," . $qq . ",公司全称：" . $company . ",公司网址：" . $website . ",来源：" . $coporation . "," . $other . "," . $refererURL .  $c_cid . "," . $landingpage . "," .$href .";\r\n";
+    $txt = $today . ",姓名：" .$username . ",联系电话：" . $tel . ",备注：" . $beizhu . ",来源：" . $coporation . "," . $refererURL .  $c_cid . "," . $landingpage . "," .$href .";\r\n";
     fwrite($myfile, $txt);
     fclose($myfile);
 }

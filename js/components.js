@@ -151,13 +151,13 @@ $(function(){
     $("#formcoporation").submit(function(){
         var data = {};
         data.username = $('#applyusername').val();
-        data.email = $('#applyemail').val();
+        // data.email = $('#applyemail').val();
         data.tel = $('#applytel').val();
-        data.job = $('#applyJob').val();
-        data.company = $('#applycompany').val();
-        data.website = $('#applywebsite').val();
+        // data.job = $('#applyJob').val();
+        // data.company = $('#applycompany').val();
+        // data.website = $('#applywebsite').val();
         data.coporation = getparm();
-        data.other = $('#applyOther').val();
+        data.beizhu = $('#applybeizhu').val();
         data.action = "coporation_action";
         //$.post('http://www.mjoys.com/wp-admin/admin-ajax.php',data, onSuccess);
         $(this).find('[type="submit"]').attr('disabled', 'disabled');
