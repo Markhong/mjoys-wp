@@ -13600,3 +13600,75 @@ a.landing_contactQQ {
     	margin-left: 55px;
 	}
 }
+.content-box--blue {
+	background: #1090C4;
+}
+.content-box--blue .title {
+	color: #fff;
+}
+.solution {
+	color: #fff;
+	margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+	.solution {
+		margin-top: 0!important;
+	}
+}
+.solution__desc {
+	font-size: 20px;
+}
+.solution__tag {
+	display: inline-block;
+	background: #fff;
+	padding: 5px 10px;
+	color: #29A4E4;
+	margin-right: 15px;
+	border-radius: 4px;
+}
+.solution__line4, .solution__line3, .solution__line2, .solution__line1 {
+	position: relative;
+    top: -17px;
+}
+.solution__line4 {
+	width: 490px;
+}
+.solution__line3 {
+	width: 560px;
+}
+.solution__line2 {
+	width: 653px;
+}
+.solution__line1 {
+	width: 725px;
+}
+.solution__imgContainer {
+	margin-top: -26px;
+}
+.solution__imgtag {
+	text-align: right;
+	margin-top: -38px;
+}
+@media screen and (max-width: 767px) {
+	.solution__imgtag { 
+		text-align: center;
+	}
+}
+.solution__imgtag1 img {
+	width: 320px;
+}
+.solution__imgtag2 img {
+	width: 300px;
+}
+.solution__imgtag3 img {
+	width: 270px;
+}
+.solution__imgtag4 img {
+	width: 240px;
+}
+.solution__imgtag5 img {
+	width: 210px;
+}
+.solution__imgtag6 img {
+	width: 180px;
+}
