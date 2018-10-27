@@ -13672,3 +13672,108 @@ a.landing_contactQQ {
 .solution__imgtag6 img {
 	width: 180px;
 }
+@media screen and (min-width: 768px) {
+	.table-compare__col {
+		float: left;
+		margin-right: 10px;
+	}
+}
+
+.table-compare__head {
+	height: 65px;
+	line-height: 65px;
+	text-align: center;
+}
+.table-compare__col--maintitle {
+	background: #f4f7fe;
+	width: 195px;
+    text-align: center;
+}
+.table-compare__col--maintitle .table-compare__detail {
+	font-size: 28px;
+    color: #999;
+    height: 75px;
+    line-height: 75px;
+}
+.table-compare__col--content {
+	box-shadow: 0 0 30px rgba(0,0,0,.1);
+	width: 300px;
+}
+@media screen and (max-width: 767px) {
+	.table-compare__col--content {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+.table-compare__col--content .table-compare__head {
+	color: #fff;
+	font-size: 28px;
+	
+}
+.table-compare__col--contentBlue .table-compare__head {
+	background: #29a2E4;
+}
+.table-compare__col--contentBlue .table-compare__detail:nth-child(3) {
+	background: #f4f7fe;
+}
+.table-compare__col--contentOrange .table-compare__head {
+	background: #ffc630;
+}
+.table-compare__col--contentOrange .table-compare__detail:nth-child(3) {
+	background: #fff6dc;
+}
+.table-compare__col--content .table-compare__detail {
+	height: 75px;
+    font-size: 22px;
+	padding: 0 20px;
+	color: #333;
+	display: flex;
+    align-items: center;
+}
+.bot-service-list {
+	color: #333;
+	font-size: 22px;
+	padding: 0px 40px 0 100px;
+}
+.bot-service-list li {
+	list-style-type: none;
+	background: url(./images/bot-service-arrow.png) no-repeat left bottom;
+	background-size: 250px;
+	padding-left: 20px;
+    padding-bottom: 28px;
+    margin-bottom: 20px;
+}
+.bot-service-result__note {
+	font-size: 22px;
+	color: #28A2E4;
+	margin-top: 30px;
+}
+.bot-service-result {
+	padding-left: 125px;
+}
+.logo-list > div {
+	padding: 0 30px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+@media screen and (max-width: 767px) {
+	.bot-service-list {
+		padding: 0;
+		text-align: center;
+	}
+	.bot-service-list li {
+		background-position: center bottom;
+	}
+	.bot-service-result {
+		padding-left: 15px;
+		text-align: center;
+	}
+	.bot-service-result__note {
+		text-align: left;
+	}
+	.logo-list > div {
+		height: auto;
+	}
+}
