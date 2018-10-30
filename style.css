@@ -3524,7 +3524,7 @@ input[type="submit"].submitting {
 	text-decoration: none;
 }
 .box-shadow{
-	box-shadow: 0 2px 10px rgba(167, 167, 167, 0.2);
+	box-shadow: 0 2px 25px rgba(167, 167, 167, 0.3);
 }
 #financial-data-content1{
 	background: #fff;
@@ -3923,11 +3923,21 @@ box-sizing: border-box;
 	background-image: url('/wp-content/themes/mjoys/assets/images/page-prev-hover.png');
 }
 .card {
-	padding: 60px 10px 45px 30px;
+	padding: 60px 10px 15px 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.card:not(.report-card) {
+	border-right: 1px solid #dbdbdb;
+	padding-right: 30px;
+	
+}
+.report-card {
+	padding-left: 0;
 }
 .card-title{
-	padding-bottom: 20px;
-	border-bottom: 1px solid #d6d6d8;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #dbdbdb;
 	font-size: 20px;
 	color: #161c2c;
 }
@@ -3978,6 +3988,9 @@ box-sizing: border-box;
 	font-size: 14px;
 	color: #bdbec1;
 	margin-top: 15px;
+}
+.content-list li:first-child {
+	margin-top: 23px;
 }
 .content-list li a {
 	color: #bdbec1;
@@ -9143,6 +9156,8 @@ a.imgpreview:hover {
 .content-list{
 	margin-bottom: 25px;
 	position: relative;
+	height: 455px;
+	overflow-y: auto;
 }
 .content-list .left{
 	display: inline-block;
