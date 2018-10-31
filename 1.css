@@ -703,13 +703,26 @@
   }
   .tab-content > .tab-pane {
     display: none;
+    padding-top: 40px;
   }
   .tab-content > .active {
     display: block;
+  }
+  .tab-content ul {
+    list-style-type: disc;
+    margin-left: 20px;
   }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
-  
+  .tab-pane__title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 60px;
+  }
+  .tab-pane__btn {
+    margin-top: 80px;
+  }
