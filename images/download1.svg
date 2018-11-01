@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="17px" viewBox="0 0 14 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>箭头 上</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="百应官网-首页" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-442.000000, -1880.000000)">
+        <g id="Group-7" transform="translate(67.000000, 1724.000000)" fill="lightgreen" fill-rule="nonzero">
+            <g id="Group-14" transform="translate(0.000000, 130.000000)">
+                <g id="Group-5" transform="translate(272.000000, 0.000000)">
+                    <g id="箭头-上" transform="translate(110.000000, 34.500000) scale(1, -1) translate(-110.000000, -34.500000) translate(103.000000, 26.000000)">
+                        <path d="M13.6605283,6.42751036 L7.82768103,0.356949007 C7.3703858,-0.118983002 6.63311391,-0.118983002 6.17581868,0.356949007 L0.342971419,6.42751036 C-0.114323806,6.90344237 -0.114323806,7.67076132 0.342971419,8.14669333 C0.800266644,8.62262534 1.53753854,8.62262534 1.99483376,8.14669333 L5.8351804,4.14983574 L5.8351804,15.7858877 C5.8351804,16.4560777 6.35780352,17 7.00174985,17 C7.64569619,17 8.16831931,16.4560777 8.16831931,15.7858877 L8.16831931,4.14497929 L12.0086659,8.14183688 C12.2373136,8.37980289 12.5359553,8.49635766 12.8345971,8.49635766 C13.1332389,8.49635766 13.4318807,8.37980289 13.6605283,8.14183688 C14.1131572,7.67076132 14.1131572,6.90344237 13.6605283,6.42751036 Z" id="Shape">
+                            <animateTransform attributeName="transform" begin="0s" dur="1s"  type="translate" from="0, 18" to="0, -18" repeatCount="indefinite"/>
+                        </path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
