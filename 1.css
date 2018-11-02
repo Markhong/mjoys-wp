@@ -803,3 +803,56 @@
 .dataWrap li.lastTime {
   border-right: none;
 }
+.leftimg {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.leftimg--grey {
+  background: #FAFBFD;
+}
+.leftimg img, .rightimg img {
+  width: 350px;
+}
+.arrowto {
+  position: absolute;
+  top: 50px;
+  right: -112px;
+  width: 250px;
+}
+.arrowto__content span {
+  color: #333;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.arrowto__content img {
+  width: 190px;
+  position: relative;
+  left: 5px;
+}
+.arrowto2 {
+  top: 180px;
+}
+.arrowto2 .arrowto__content span {
+  margin-bottom: 0;
+}
+
+.home-leftcontent__title {
+  color: #28A2E4;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.home-rightcontent {
+  background: #FAFBFD;
+}
+@media screen and (min-width: 768px) {
+  .home-content1 .col-sm-6 {
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 300px;
+  }
+  .home-content {
+    padding: 100px 100px 80px 110px;
+  }
+}
