@@ -175,6 +175,26 @@
 .icon-content-list__icon--edit img {
     margin-top: 22px;
 }
+
+.icon-content-list__icon--huashu img {
+  margin-top: 28px;
+}
+.icon-content-list__icon--voice img {
+  margin-top: 22px;
+}
+.icon-content-list__icon--import img {
+  margin-top: 21px;
+}
+.icon-content-list__icon--shibie img {
+  margin-top: 23px;
+}
+.icon-content-list__icon--daduan img {
+  margin-top: 29px;
+}
+.icon-content-list__icon--tongji img {
+  margin-top: 25px;
+}
+
 .icon-content-list__title {
     font-size: 20px;
     font-weight: 700;
@@ -855,4 +875,49 @@
   .home-content {
     padding: 100px 100px 80px 110px;
   }
+}
+.card-option {
+  background: linear-gradient(0deg, #07709B 0%, #28A2E4 100%);
+  padding: 100px 30px;
+  color: #fff;
+  height: 435px;
+  /* transition: all .2s; */
+  /* margin-right: 15px; */
+}
+.card-option:hover {
+  background: #73ceff;
+}
+@media screen and (min-width: 768px) {
+  .col-card .col-sm-2 {
+    width: 20%;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+.card-option__title {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+.card-option__img {
+  text-align: center;
+}
+
+.pattern-content {
+  background: #FAFBFD;
+  padding: 100px;
+}
+.pattern-content:first-child {
+  margin-right: 15px;
+}
+.pattern__title {
+  margin-bottom: 50px;
+  font-size: 22px;
+  color:#28A2E4;
+}
+.pattern__desc {
+  color: #3F3F3F;
+}
+.pattern__desc strong {
+  color: #333;
 }

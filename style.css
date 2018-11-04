@@ -224,6 +224,11 @@ input[type='text'], input[type='password'], textarea, input[type='email'], input
 	letter-spacing: -1px;
 	font-size: 14px;
 }
+@media screen and (max-width: 767px) {
+	.nav-main .nav-overview {
+		margin-bottom: 17px;
+	}
+}
 .nav-main .nav-overview img {
 	position: relative;
 	/*top: 9px;*/
@@ -394,7 +399,7 @@ input[type='text'], input[type='password'], textarea, input[type='email'], input
 @media screen and (max-width: 767px){
 	.navbar-nav > ul > li.menu-coporation{
 		margin-left: 0;
-		margin-top: 0;
+		margin-top: 0!important;
 	}
 	.navbar-nav > ul > li.menu-coporation a{
 		background: transparent;
@@ -1640,7 +1645,7 @@ li.fix-click:not(.menu-coporation) a:hover:after {
     padding: 36px 28px 6px;
 }
 #dropdownmenu-menu .menu-item-has-children.childmenu-active > a, #dropdownmenu-menu .childmenu-active > a{
-    color: #fff;
+    /* color: #fff; */
 }
 .navbar-nav > ul > li.menu-coporation {
     margin-top: 32px;
@@ -13817,4 +13822,7 @@ a.btn-border:after {
 .tab-content a.btn-border:hover:after {
 	transform: translateY(0);
     content: "了解详情";
+}
+.text-theme {
+	color: #28A2E4;
 }
