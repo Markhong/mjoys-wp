@@ -359,7 +359,7 @@ $(function(){
         alwaysShowControls: true,
         features: ['playpause','progress'],
         audioWidth: 222,
-        audioHeight: 250,
+        audioHeight: 280,
         iPadUseNativeControls: true,
         iPhoneUseNativeControls: true,
         AndroidUseNativeControls: true
