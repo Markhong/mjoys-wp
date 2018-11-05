@@ -352,4 +352,17 @@ $(function(){
         });
         return false;
     });   
+
+
+    $('.audio-player audio').each(function() {
+        $(this).mediaelementplayer({
+        alwaysShowControls: true,
+        features: ['playpause','progress'],
+        audioWidth: 222,
+        audioHeight: 250,
+        iPadUseNativeControls: true,
+        iPhoneUseNativeControls: true,
+        AndroidUseNativeControls: true
+        });
+    })
 });
