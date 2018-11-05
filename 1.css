@@ -36,7 +36,7 @@
     margin-top: 165px;
     margin-bottom: 20px;
     text-align: left;
-    text-shadow: 0 3px 3px rgba(0,0,0,.5);
+    text-shadow: 0 4px 14px rgba(0,0,0,.4);
 }
 .banner-home h1 {
     text-align: right;
@@ -73,6 +73,9 @@
     color: #91FFF3;
     font-size: 34px;
     margin-bottom: 10px;
+    background-image: -webkit-linear-gradient(bottom, #cefff9, #90fff2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .banner-jingling p {
   color: #D7FBFF;
@@ -128,6 +131,7 @@
     text-decoration: none;
     text-align: center;
     border-radius: 4px;
+    box-shadow: 0 3px 21px 0 #28A2E4;
 }
 .deep-mining-trial a:hover {
     background: #73ceff;
@@ -927,13 +931,21 @@
 /** audio player styles **/
 .mejs-container {
   position: relative;
-  float: left;
   padding-right: 20px;
   padding-left: 20px;
   overflow: hidden;
-  width: 20%!important;
 }
-
+@media screen and (min-width: 768px) {
+  .mejs-container {
+    float: left;
+    width: 20%!important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mejs-container {
+    margin: 0 auto;
+  }
+}
 div.audio-player {
   position: relative;
 }
@@ -1023,10 +1035,10 @@ div.audio-player {
 .mejs-controls .mejs-time-rail span {
   position: absolute;
   display: block;
-  width: 222px;
+  /* width: 222px; */
   height: 8px;
   bottom: 0;
-  left: 8px;
+  left: 0;
   /* margin-left: -80px; */
   cursor: pointer;
   -webkit-border-radius: 0px 0px 30px 30px;
@@ -1035,11 +1047,12 @@ div.audio-player {
 }
  
 .mejs-controls .mejs-time-rail .mejs-time-total { 
-  width: 100% !important; /* fixes display bug using jQuery 1.8+ */
+  width: calc(100% - 40px)!important; /* fixes display bug using jQuery 1.8+ */
   border-radius: 30px;
+  left: 20px;
 }
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
-  width: calc(100% - 40px)!important;
+  width: 100%!important;
   background: #f2f2f2;
   border-radius: 30px;
 }
@@ -1073,4 +1086,18 @@ div.audio-player {
   color: #666;
   text-align: center;
   z-index: 9999;
+}
+.audio-desc {
+  margin-top: 15px;
+}
+.audio-desc__content {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .audio-desc__content {
+    float: left;
+    width: 20%;
+  } 
 }

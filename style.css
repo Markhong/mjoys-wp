@@ -13619,6 +13619,14 @@ a.landing_contactQQ {
 		margin-top: -110px;
     	margin-left: 55px;
 	}
+
+	.huoke-paint--2 {
+		padding-left: 30px;
+	}
+	.huoke-paint--2 img {
+		position: relative;
+		left: -15px;
+	}
 }
 .content-box--blue {
 	background: #1090C4;

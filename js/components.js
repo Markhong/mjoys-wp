@@ -331,27 +331,30 @@ $(function(){
     });
 
     $("#from-quanyutong").submit(function(){
-        var data = {};
-        data.tel = $('#tel').val();
-        data.action = "quanyutong_action";
-        //$.post('http://www.mjoys.com/wp-admin/admin-ajax.php',data, onSuccess);
-        $(this).find('[type="submit"]').attr('disabled', 'disabled');
-        $.ajax({
-            url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
-            data: data,
-            type: "POST",
-            beforeSend: function () {
-            },
-            error: function (request) {
-            },
-            success: function (data) {
-                setTimeout(function(){
-                    window.location.href = '/signup/success/';
-                }, 500);
-            }
-        });
+        // var data = {};
+        // data.tel = $('#tel').val();
+        // data.action = "quanyutong_action";
+        // $(this).find('[type="submit"]').attr('disabled', 'disabled');
+        // $.ajax({
+        //     url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
+        //     data: data,
+        //     type: "POST",
+        //     beforeSend: function () {
+        //     },
+        //     error: function (request) {
+        //     },
+        //     success: function (data) {
+        //         setTimeout(function(){
+        //             window.location.href = '/signup/success/';
+        //         }, 500);
+        //     }
+        // });
+        // return false;
+        window.location.href = 'signup.html?tel=' + $('#tel').val();
         return false;
     });   
+
+    $("#applytel").val(getRequest()['tel']);
 
 
     $('.audio-player audio').each(function() {
@@ -359,7 +362,7 @@ $(function(){
         alwaysShowControls: true,
         features: ['playpause','progress'],
         audioWidth: 222,
-        audioHeight: 280,
+        audioHeight: 250,
         iPadUseNativeControls: true,
         iPhoneUseNativeControls: true,
         AndroidUseNativeControls: true
