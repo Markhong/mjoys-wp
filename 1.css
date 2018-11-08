@@ -8,7 +8,10 @@
 .content-box .title {
     margin-bottom: 18px;
 }
-
+.content-box .subtitle {
+  font-weight: 700;
+  font-size: 18px;
+}
 .banner-bigdatamarketing, .banner-botsales, .banner-home, .banner-jingling {
     background: url(./images/qyt_img.png) no-repeat;
     background-size: cover;
@@ -103,6 +106,13 @@
 .deep-mining-list {
     margin-top: 60px;
     margin-bottom: 60px;
+}
+@media screen and (max-width: 767px) {
+  .deep-mining-list {
+    margin-top: 30px;
+    margin-bottom: 45px;
+    top: 0!important;
+  }
 }
 .deep-mining-list__title {
     color: #28a5e8;
@@ -770,6 +780,14 @@
     display: none;
     padding-top: 40px;
   }
+
+  @media screen and (max-width: 767px) {
+    .tab-content > .tab-pane {
+      display: block;
+      padding-top: 0;
+      opacity: 1;
+    }
+  }
   .tab-content > .active {
     display: block;
   }
@@ -790,6 +808,19 @@
   }
   .tab-pane__btn {
     margin-top: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    .tab-pane__maintitle {
+      font-weight: 700;
+      font-size: 28px;
+      color: #333;
+    }
+    .tab-pane__title {
+      margin-top: 30px;
+    }
+    .tab-pane__btn {
+      margin-top: 35px;
+    }
   }
   .dataWrap {
     width: 100%;
@@ -883,10 +914,19 @@
   font-weight: 700;
   margin-bottom: 15px;
 }
-.home-rightcontent {
-  background: #FAFBFD;
+@media screen and (max-width: 767px) {
+  .home-leftcontent__title {
+    font-size: 16px;
+  }
+  .home-content__content {
+    font-size: 14px;
+  }
 }
+
 @media screen and (min-width: 768px) {
+  .home-rightcontent {
+    background: #FAFBFD;
+  }
   .home-content1 .col-sm-6 {
     padding-left: 5px;
     padding-right: 5px;
