@@ -448,23 +448,23 @@ function apply_adalliance(){
 
 
 //全域通
-// add_action('wp_ajax_quanyutong_action', 'quanyutong_action');
-// add_action('wp_ajax_nopriv_quanyutong_action', 'quanyutong_action');
+add_action('wp_ajax_quanyutong_action', 'quanyutong_action');
+add_action('wp_ajax_nopriv_quanyutong_action', 'quanyutong_action');
 
-// function quanyutong_action(){
-//     //record to txt
-//     $tel = $_POST['tel'];
-//     $refererURL = $_COOKIE['R_url'];
-//     $c_cid = $_COOKIE['C_cId'];
-//     $landingpage = $_COOKIE['landingUrl'];
-//     $today = date("Y-m-d");
+function quanyutong_action(){
+    //record to txt
+    $tel = $_POST['tel'];
+    $refererURL = $_COOKIE['R_url'];
+    $c_cid = $_COOKIE['C_cId'];
+    $landingpage = $_COOKIE['landingUrl'];
+    $today = date("Y-m-d");
 
-//     $myfile = $myfile = fopen(get_template_directory() . "/txt/corporation_form.txt", "a") or die("Unable to open file!");
+    $myfile = $myfile = fopen(get_template_directory() . "/txt/corporation_form.txt", "a") or die("Unable to open file!");
 
-//     $txt = "电话：" . $tel . "," . $refererURL . "," . $c_cid . "," . $landingpage . "," . $today . ";\r\n";
-//     fwrite($myfile, $txt);
-//     fclose($myfile);
-// }
+    $txt = "电话：" . $tel . "," . $refererURL . "," . $c_cid . "," . $landingpage . "," . $today . ";\r\n";
+    fwrite($myfile, $txt);
+    fclose($myfile);
+}
 
 
 ?>
