@@ -13790,7 +13790,7 @@ a.landing_contactQQ {
 }
 .bot-service-list li {
 	list-style-type: none;
-	background: url(./images/bot-service-arrow.png) no-repeat left bottom;
+	background: url(http://www.mjoys.com/wp-content/uploads/bot-service-arrow.png) no-repeat left bottom;
 	background-size: 250px;
 	padding-left: 20px;
     padding-bottom: 28px;
@@ -13884,20 +13884,20 @@ a.btn-border:after {
   font-size: 18px;
 }
 .banner-bigdatamarketing, .banner-botsales, .banner-home, .banner-jingling {
-    background: url(./images/qyt_img.png) no-repeat;
+    background: url(http://www.mjoys.com/wp-content/uploads/qyt_img.png) no-repeat;
     background-size: cover;
     background-position: center;
     height: 570px;
     /* margin-top: 67px; */
 }
 .banner-botsales {
-    background-image: url(./images/banner_botsales.png);
+    background-image: url(http://www.mjoys.com/wp-content/uploads/banner_botsales.png);
 }
 .banner-home {
-    background-image: url(./images/banner_home.png);
+    background-image: url(http://www.mjoys.com/wp-content/uploads/banner_home.png);
 }
 .banner-jingling {
-    background-image: url(./images/banner_jingling.png);
+    background-image: url(http://www.mjoys.com/wp-content/uploads/banner_jingling.png);
 }
 @media screen and (max-width: 767px) {
     .banner-bigdatamarketing, .banner-botsales {
@@ -14122,7 +14122,7 @@ a.btn-border:after {
 }
 .content-box--calltoaction {
     background-color: #28a2e4;
-    background-image: url(./images/bg-calltoaction.png);
+    background-image: url(http://www.mjoys.com/wp-content/uploads/bg-calltoaction.png);
     background-repeat: no-repeat;
     background-position: center;
     /* background-size: cover; */
@@ -14455,10 +14455,10 @@ a.btn-border:after {
     }
   }
   .glyphicon-chevron-left {
-      background: url(./images/arrowl.png) no-repeat;
+      background: url(http://www.mjoys.com/wp-content/uploads/arrowl.png) no-repeat;
   }
   .glyphicon-chevron-right {
-      background: url(./images/arrowr.png) no-repeat;
+      background: url(http://www.mjoys.com/wp-content/uploads/arrowr.png) no-repeat;
   }
 
 
