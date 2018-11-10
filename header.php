@@ -72,7 +72,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--<link href="<?php bloginfo('template_url');?>/assets/css/style.css" id="style_components" rel="stylesheet"
         type="text/css" />-->
-    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=2.3" type="text/css" media="screen, projection" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>?ver=2.4" type="text/css" media="screen, projection" />
     <link href="<?php bloginfo('template_url');?>/assets/css/animate.min.css" rel="stylesheet"
         type="text/css" />
     <link href="<?php bloginfo('template_url');?>/assets/css/wow.min.css" rel="stylesheet"
@@ -109,13 +109,13 @@ var _hmt = _hmt || [];
     </div> -->
     <!-- <div class="secmenu">
         <div class="secmenu-content"> -->
-    <div class="nav-main">
+    <div class="nav-main" style="background: transparent;">
         <div class="container clearfix">
-	<h1 class="logo-wrap">
-          <a href="/" title="摸象大数据 – 中国领先的全域大数据科技公司" class="nav-overview">
-             <img src="/wp-content/uploads/logo-mjoys.png?v=1.0.1" alt="摸象大数据" width="145" height="34"/>
-          </a>
-	</h1>
+            <h1 class="logo-wrap">
+                <a href="/" title="摸象大数据 – 中国领先的全域大数据科技公司" class="nav-overview">
+                    <img src="/wp-content/uploads/logo-mjoys.png?v=1.0.1" alt="摸象大数据" width="145" height="34"/>
+                </a>
+            </h1>
           <!-- <div class="secmenu-dropdown">
           </div> -->
           <?php
