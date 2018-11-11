@@ -350,7 +350,7 @@ $(function(){
         //     }
         // });
         // return false;
-        window.location.href = 'signup.html?tel=' + $('#tel').val();
+        window.location.href = 'http://www.mjoys.com/signup/?tel=' + $('#tel').val();
         return false;
     });   
 

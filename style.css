@@ -3199,7 +3199,7 @@ input[type="submit"].submitting {
 .bread-crumb-container{
 	position: absolute;
     top: 0;
-    padding-top: 80px;
+    padding-top: 67px;
     width: 100%;
     z-index: 99;
     background: #fff;
@@ -4214,7 +4214,7 @@ box-sizing: border-box;
 	background-position: center 186px;
 }
 .banner-wrap .signup-banner{
-	background-image: url('./images/banner_signup.png');
+	background-image: url('/wp-content/uploads/banner_signup.png');
 	background-color: #323841;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -14900,10 +14900,10 @@ div.audio-player {
   background-size: contain;
 }
 .mejs-controls .mejs-play button {
-  background-image: url('./images/play.png');
+  background-image: url('/wp-content/uploads/play.png');
 }
 .mejs-controls .mejs-pause button { 
-  background-image: url('./images/pause.png'); 
+  background-image: url('/wp-content/uploads/pause.png'); 
 }
  
  
@@ -14998,7 +14998,7 @@ div.audio-player {
   top: -26px;
   margin-left: -17px;
   z-index: 9999;
-  background: url('./images/time-box.png');
+  background: url('/wp-content/uploads/time-box.png');
 }
  
 .mejs-controls .mejs-time-rail .mejs-time-float-current {
