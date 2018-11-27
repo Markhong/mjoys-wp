@@ -13902,7 +13902,19 @@ a.btn-border:after {
 @media screen and (max-width: 767px) {
     .banner-bigdatamarketing, .banner-botsales {
         margin-top: 47px;
-    }
+	}
+	.banner-bigdatamarketing {
+		background-image: url(http://www.mjoys.com/wp-content/uploads/qyt_img-mobile.png);
+	}
+	.banner-botsales {
+		background-image: url(http://www.mjoys.com/wp-content/uploads/banner_botsales-mobile.png);
+	}
+	.banner-home {
+		background-image: url(http://www.mjoys.com/wp-content/uploads/banner_home-mobile.png);
+	}
+	.banner-jingling {
+		background-image: url(http://www.mjoys.com/wp-content/uploads/banner_jingling-mobile.png);
+	}
 }
 .banner-bigdatamarketing h1, .banner-botsales h1, .banner-home h1 {
     color: #fff;
@@ -13929,7 +13941,7 @@ a.btn-border:after {
 @media screen and (max-width: 767px) {
     .banner-bigdatamarketing h1, .banner-botsales h1, .banner-jingling h1 {
         margin-top: 0;
-        font-size: 30px;
+        font-size: 28px;
         padding-top: 110px;
     }
     .banner-home h1 {
@@ -13967,8 +13979,14 @@ a.btn-border:after {
     box-shadow: 0 3px 21px 0 #28A2E4;
 }
 @media screen and (max-width: 767px) {
+	.banner-bigdatamarketing p, .banner-botsales p, .banner-home p {
+		font-size: 16px;
+	}
   .banner-home p {
     font-size: 26px;
+  }
+  .banner-jingling p {
+	  font-size: 20px;
   }
 }
 .marketing-box .title {
@@ -14003,7 +14021,11 @@ a.btn-border:after {
     margin-bottom: 10px;
     color: #28a5e8;
 }
-.deep-mining-list__btn a:hover {
+.deep-mining-list__btn.deep-mining-list__btn--disabled a {
+	cursor: default;
+	text-decoration: none;
+}
+.deep-mining-list__btn:not(.deep-mining-list__btn--disabled) a:hover {
     background: #28a5e8;
     color: #fff;
     text-decoration: none;

@@ -236,7 +236,7 @@ $(function(){
         // data.job = $('#applyJob').val();
         // data.company = $('#applycompany').val();
         // data.website = $('#applywebsite').val();
-        data.coporation = getparm();
+        data.coporation = getRequest()['source'];
         data.beizhu = $('#applybeizhu').val();
         data.action = "coporation_action";
         //$.post('http://www.mjoys.com/wp-admin/admin-ajax.php',data, onSuccess);
@@ -350,7 +350,7 @@ $(function(){
         //     }
         // });
         // return false;
-        window.location.href = 'http://www.mjoys.com/signup/?tel=' + $('#tel').val();
+        window.location.href = 'http://www.mjoys.com/signup/?tel=' + $('#tel').val() + '&source=' + $("#source").val();
         return false;
     });   
 
