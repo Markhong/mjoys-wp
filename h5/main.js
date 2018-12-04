@@ -93,4 +93,63 @@ window.onload = function() {
             return false;
         }
     });
+
+    $('.help').click(function() {
+        var dataModal = $(this).data('modal');
+        $("#" + dataModal).toggleClass('modal--show');
+    });
+    $('.gotocalc').click(function() {
+        window.location.href="./calcCarXian.html";
+    });
+    $('.gotowin').click(function() {
+        window.location.href="./luckydraw.html";
+    });
+    $('.modal-overlay').click(function() {
+        $('.modal--show').toggleClass('modal--show');
+    });
+
+    var errorTime = 0;
+    $("#formGetPrice").submit(function(){
+        var data = {};
+        data.carcode = $('#carcode').val();
+        data.name = $('#name').val();
+        data.tel = $('#tel').val();
+        data.action = "getPrice_action";
+        $.ajax({
+            url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
+            data: data,
+            type: "POST",
+            beforeSend: function () {
+                $("#waitingforprice").toggleClass('modal--show');
+                $('.modal-overlay').unbind('click');
+            },
+            error: function (request) {
+                errorTime++;
+                $("#waitingforprice").removeClass('modal--show');
+                $("#formError").addClass('modal--show');
+                if (errorTime == 1) {
+                    $("#formError #form-error1").show();
+                    $("#formError #form-error2").hide();
+                } else {
+                    $("#formError #form-error2").show();
+                    $("#formError #form-error1").hide();
+                }
+                
+            },
+            success: function (data) {
+                // $('#adusername').val("");
+                // $('#ademail').val("");
+                // $('#adtel').val("");
+                // $('#adurl').val("");
+            }
+        });
+        return false;
+    });
+
+    $('.modal-close').click(function() {
+        $('.modal--show').removeClass('modal--show');
+        $('.modal-overlay').bind('click', function() {
+            $('.modal--show').toggleClass('modal--show');
+        });
+    });
 };

@@ -244,7 +244,7 @@ table {
 
 
 .draw {
-    width: 75%;
+    width: 80%;
     /* height: 600px; */
 	margin: 0 auto;
 	height: calc(100% - 20px);
@@ -256,13 +256,11 @@ table {
 }
 .drawContent {
 	position: absolute;
-    bottom: 124px;
-    left: 50%;
-    transform: translateX(-50%);
+	bottom: 138px;
 }
 .draw .item {
     width: 75px;
-    height: 60px;
+    height: 75px;
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -349,7 +347,7 @@ table {
 
 .draw .draw-btn {
     display: block;
-    height: 60px;
+    height: 75px;
     /* line-height: 75px;
     border-radius: 20px;
     font-size: 25px;
