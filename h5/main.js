@@ -35,6 +35,7 @@ var lottery = {
 };
 
 var click = false;
+var prizeTime = 0;
 
 function roll() {
     lottery.times += 1;
@@ -50,7 +51,7 @@ function roll() {
                 shade: false,
                 maxmin: true, //开启最大化最小化按钮
                 area: ['793px', '600px'],
-                content: $("#info").html()
+                content: prizeTime == 1 ? $("#info2").html() : $("#info").html()
             });
         }, 1000);
         
@@ -62,8 +63,12 @@ function roll() {
         if(lottery.times < lottery.cycle) {
             lottery.speed -= 10;
         } else if(lottery.times == lottery.cycle) {
-            // var index = Math.random() * (lottery.count) | 0; //静态演示，随机产生一个奖品序号，实际需请求接口产生
-            var index = 0;
+            var index = Math.random() * (lottery.count) | 0; //静态演示，随机产生一个奖品序号，实际需请求接口产生
+            if (index >= 0 & index < 4) {
+                index = 0;
+            } else {
+                index = 5;
+            }
             lottery.prize = index;
         } else {
             if(lottery.times > lottery.cycle + 10 && ((lottery.prize == 0 && lottery.index == 7) || lottery.prize == lottery.index + 1)) {
@@ -81,8 +86,14 @@ function roll() {
 }
 
 window.onload = function() {
+    
     lottery.init('lottery');
     $('.draw-btn').click(function() {
+        if (prizeTime >= 1) {
+            $('#modal-prizeTimesEnd').addClass('modal--show');
+            return;
+        }
+        prizeTime ++;
         if(click) { //click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
             return false;
 
@@ -111,14 +122,13 @@ window.onload = function() {
     var errorTime = 0;
     $("#formGetPrice").submit(function(){
         var data = {};
-        data.carcode = $('#carcode').val();
+        data.insurance = $('#carcode').val();
         data.name = $('#name').val();
-        data.tel = $('#tel').val();
+        data.mobile = $('#tel').val();
         data.action = "getPrice_action";
         $.ajax({
-            url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
+            url: 'https://batman.mjoys.com/bat/open/shanghai/getFee',
             data: data,
-            type: "POST",
             beforeSend: function () {
                 $("#waitingforprice").toggleClass('modal--show');
                 $('.modal-overlay').unbind('click');
@@ -136,13 +146,83 @@ window.onload = function() {
                 }
                 
             },
-            success: function (data) {
-                // $('#adusername').val("");
-                // $('#ademail').val("");
-                // $('#adtel').val("");
-                // $('#adurl').val("");
+            success: function (response) {
+                if (response.data === null) {
+                    errorTime++;
+                    $("#waitingforprice").removeClass('modal--show');
+                    $("#formError").addClass('modal--show');
+                    if (errorTime == 1) {
+                        $("#formError #form-error1").show();
+                        $("#formError #form-error2").hide();
+                    } else {
+                        $("#formError #form-error2").show();
+                        $("#formError #form-error1").hide();
+                    }
+                    return;
+                }
+                //CPIC: {totalPremium: "2885.61", biPremium: "1635.61", ciPremium: "950.00", vehicleTaxPremium: "300.00", biDiscount: "0.4225"}
+                //PICC: {totalPremium: "2885.61", biPremium: "1635.61", ciPremium: "950.00", vehicleTaxPremium: "300.00", biDiscount: "0.4225"}
+                var objResponseData = {};
+                JSON.parse(response.data.data).forEach(function(responseData) {
+                    objResponseData[responseData.insureComCode] = {
+                        'totalPremium': responseData.totalPremium,
+                        'biPremium': responseData.biPremium,
+                        'ciPremium': responseData.ciPremium,
+                        'vehicleTaxPremium': responseData.vehicleTaxPremium,
+                        'biDiscount': responseData.discountInfo.biDiscount
+                    }
+                });
+                $("#waitingforprice").removeClass('modal--show');
+                $('.form-calc').hide();
+                $('.calc-result').show();
+                // alert(objResponseData['PICC'].biDiscount);
+                $('#carInfo-number').html(response.data.insurance);
+                var myDate = new Date();
+                $('#carInfo-date').html(myDate.getFullYear()+'.'+myDate.getMonth()+'.'+myDate.getDate() + ' - ' + (parseInt(myDate.getFullYear())+1)+'.'+myDate.getMonth()+'.'+myDate.getDate());
+                
+                for(var i in objResponseData) {
+                    $('.insuranceinfo').append('<div class="insuranceinfo--details">' +
+                            '<div class="insuranceinfo--title">' +
+                                (i == 'CPIC' ? '太平洋保险' : '人民保险') +
+                            '</div>' +
+                            '<div>总保费：￥' + objResponseData[i].totalPremium + '</div>' +
+                            '<div>交强险：￥' + objResponseData[i].ciPremium + '</div>' +
+                            '<div>商业险：￥' + objResponseData[i].biPremium + '</div>' +
+                            '<div>车船税：￥' + objResponseData[i].vehicleTaxPremium + '</div>' +
+                            '<div>商业折扣：' + parseFloat(objResponseData[i].biDiscount)*10 + '折</div>' +
+                        '</div>');
+                }
             }
         });
+        //https://batman.mjoys.com/open/bat/shanghai/getFee?insurance=%E6%B2%AAGC9262&name=%E6%9D%8E%E6%98%8E&mobile=13811238989
+        // $.ajax({
+        //     url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
+        //     data: data,
+        //     type: "POST",
+        //     beforeSend: function () {
+        //         $("#waitingforprice").toggleClass('modal--show');
+        //         $('.modal-overlay').unbind('click');
+        //     },
+        //     error: function (request) {
+        //         errorTime++;
+        //         $("#waitingforprice").removeClass('modal--show');
+        //         $("#formError").addClass('modal--show');
+        //         if (errorTime == 1) {
+        //             $("#formError #form-error1").show();
+        //             $("#formError #form-error2").hide();
+        //         } else {
+        //             $("#formError #form-error2").show();
+        //             $("#formError #form-error1").hide();
+        //         }
+                
+        //     },
+        //     success: function (data) {
+        //         // $('#adusername').val("");
+        //         // $('#ademail').val("");
+        //         // $('#adtel').val("");
+        //         // $('#adurl').val("");
+        //     }
+        // });
         return false;
     });
 
@@ -152,4 +232,13 @@ window.onload = function() {
             $('.modal--show').toggleClass('modal--show');
         });
     });
+
+    
 };
+
+$(function() {
+    $(document).on("click", ".gotoforward", function(){ 
+        $('#layui-m-layer0').hide();
+        $('#modal-forward').addClass('modal--show');
+    }); 
+});

@@ -87,6 +87,15 @@ table {
 	background-size: contain;
 	position: relative;
 }
+.calc-result {
+	text-align: center;
+	width: 320px;
+	height: 80%;
+	margin: 0 auto 45px;
+	background: url(./images/bg-formcarxianresult.png) no-repeat center bottom;
+	background-size: contain;
+	position: relative;
+}
 .form-calc .form {
 	position: absolute;
 	bottom: 20px;
@@ -127,6 +136,17 @@ table {
 .gotowin:active {
 	background-image: url(./images/btn-gotowin-clicked.png);
 }
+.gotoforward {
+	background: url(./images/btn-forward.png) no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 55px;
+	background-position: center;
+	margin-top: 150px;
+}
+.gotoforward:active {
+	background-image: url(./images/btn-forward-clicked.png);
+}
 .help {
 	position: absolute;
 	top: 25px;
@@ -146,6 +166,13 @@ table {
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+}
+.modal#modal-forward {
+	top: 55px;
+    -webkit-transform: translateX(-50%) translateY(0%);
+    -moz-transform: translateX(-50%) translateY(0%);
+    -ms-transform: translateX(-50%) translateY(0%);
+    transform: translateX(-50%) translateY(0%);
 }
 .modal--show {
     visibility: visible;
@@ -221,10 +248,39 @@ table {
     transform: translateX(-50%);
     width: 35px;
 }
-
-
-
-
+.carinfo {
+	position: absolute;
+    top: 192px;
+    text-align: left;
+    color: #7157b8;
+    font-size: 14px;
+    left: 52px;
+}
+.carinfo > :first-child {
+	margin-bottom: 8px;
+}
+.insuranceinfo {
+	position: absolute;
+    bottom: 55px;
+    left: 84px;
+	text-align: left;
+	color: #888e94;
+}
+.insuranceinfo .insuranceinfo--title {
+	text-align: center;
+	color: #697bff;
+	background: url(./images/bg-title.png) no-repeat center bottom;
+	padding-bottom: 16px;
+	margin-bottom: 14px;
+}
+.insuranceinfo--details div:not(.insuranceinfo--title) {
+	margin-bottom: 4px;
+}
+.calc-result .gotowin {
+	position: absolute;
+    bottom: -100px;
+    left: 0;
+}
 
 
 
@@ -521,9 +577,14 @@ table {
 
 .layui-m-layer1 .layui-m-layercont {
 	padding: 0;
-	text-align: left;
+	text-align: center;
 	position: relative;
 }
+
+.layui-m-layer1 .layui-m-layercont img {
+	max-width: 80%;
+}
+
 .layui-m-layercont h1 {
     color: #e04538;
     position: absolute;

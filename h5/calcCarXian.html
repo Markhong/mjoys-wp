@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="./luckydraw.css?v=22221111111111111111111111111111111111111111111">
+    <link rel="stylesheet" href="./luckydraw.css?v=22221111111111111111111111111111111111111111111111111">
 </head>
 <body>
     <div class="main main--calccarxian">
@@ -30,7 +30,7 @@
             
         </div>
         <div class="modal-overlay"></div>
-        <div class="form-calc">
+        <div class="form-calc" style="display: none;">
             <form id="formGetPrice">
                 <div class="form">
                     <div class="form__row">
@@ -50,6 +50,17 @@
                 </div>
             </form>
             
+        </div>
+        <div class="calc-result" >
+            <div class="carinfo">
+                <div>车辆信息：<span id="carInfo-number"></span></div>
+                <div>起保日期：<span id="carInfo-date"></span></div>
+            </div>
+            <div class="insuranceinfo">
+                    <div class="insuranceinfo--details"><div class="insuranceinfo--title">太平洋保险</div><div>总保费：￥2885.61</div><div>交强险：￥950.00</div><div>商业险：￥1635.61</div><div>车船税：￥300.00</div><div>商业折扣：4.225折</div></div>
+                    <div class="insuranceinfo--details"><div class="insuranceinfo--title">人民保险</div><div>总保费：￥2885.61</div><div>交强险：￥950.00</div><div>商业险：￥1635.61</div><div>车船税：￥300.00</div><div>商业折扣：4.225折</div></div>
+            </div>
+            <button class="gotowin"></button>
         </div>
         
     </div>
