@@ -142,7 +142,7 @@ table {
     width: 100%;
     height: 55px;
 	background-position: center;
-	margin-top: 150px;
+	margin-top: 70px;
 }
 .gotoforward:active {
 	background-image: url(./images/btn-forward-clicked.png);

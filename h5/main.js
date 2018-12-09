@@ -1,3 +1,16 @@
+function setCookies(e, t, a) {
+    var o = new Date;
+    o.setDate(o.getDate() + a),
+    document.cookie = e + "=" + escape(t) + (null == a ? "" : ";expires=" + o.toGMTString()) + ";path=/"
+}
+function getCookies(e) {
+    return document.cookie.length > 0 && (c_start = document.cookie.indexOf(e + "="),
+    -1 != c_start) ? (c_start = c_start + e.length + 1,
+    c_end = document.cookie.indexOf(";", c_start),
+    -1 == c_end && (c_end = document.cookie.length),
+    unescape(document.cookie.substring(c_start, c_end))) : ""
+}
+
 var lottery = {
     index: -1, //当前转动到哪个位置，起点位置
     count: 0, //总共有多少个位置
@@ -36,6 +49,7 @@ var lottery = {
 
 var click = false;
 var prizeTime = 0;
+var ifShared = false;
 
 function roll() {
     lottery.times += 1;
@@ -51,7 +65,7 @@ function roll() {
                 shade: false,
                 maxmin: true, //开启最大化最小化按钮
                 area: ['793px', '600px'],
-                content: prizeTime == 1 ? $("#info2").html() : $("#info").html()
+                content: !ifShared ? $("#info2").html() : $("#info").html()
             });
         }, 1000);
         
@@ -89,11 +103,12 @@ window.onload = function() {
     
     lottery.init('lottery');
     $('.draw-btn').click(function() {
-        if (prizeTime >= 1) {
+        
+        if (getCookies('prizeTime') !=='' && parseInt(getCookies('prizeTime')) >= 1 && !ifShared) {
             $('#modal-prizeTimesEnd').addClass('modal--show');
             return;
         }
-        prizeTime ++;
+        setCookies('prizeTime', 1, 30);
         if(click) { //click控制一次抽奖过程中不能重复点击抽奖按钮，后面的点击不响应
             return false;
 
