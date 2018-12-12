@@ -175,6 +175,7 @@ window.onload = function() {
                     }
                     return;
                 }
+                //https://batman.mjoys.com/bat/open/shanghai/getFee?insurance=%E6%B2%AAGC9262&name=%E6%9D%8E%E6%98%8E&mobile=13811238989
                 //CPIC: {totalPremium: "2885.61", biPremium: "1635.61", ciPremium: "950.00", vehicleTaxPremium: "300.00", biDiscount: "0.4225"}
                 //PICC: {totalPremium: "2885.61", biPremium: "1635.61", ciPremium: "950.00", vehicleTaxPremium: "300.00", biDiscount: "0.4225"}
                 var objResponseData = {};
@@ -193,7 +194,7 @@ window.onload = function() {
                 // alert(objResponseData['PICC'].biDiscount);
                 $('#carInfo-number').html(response.data.insurance);
                 var myDate = new Date();
-                $('#carInfo-date').html(myDate.getFullYear()+'.'+myDate.getMonth()+'.'+myDate.getDate() + ' - ' + (parseInt(myDate.getFullYear())+1)+'.'+myDate.getMonth()+'.'+myDate.getDate());
+                $('#carInfo-date').html(myDate.getFullYear()+'.'+myDate.getMonth() + 1 +'.'+myDate.getDate() + ' - ' + (parseInt(myDate.getFullYear())+1)+'.'+myDate.getMonth()+'.'+myDate.getDate());
                 
                 for(var i in objResponseData) {
                     $('.insuranceinfo').append('<div class="insuranceinfo--details">' +
@@ -257,3 +258,40 @@ $(function() {
         $('#modal-forward').addClass('modal--show');
     }); 
 });
+
+
+// function sendMessage(){
+//     WeixinJSBridge.on('menu:share:timeline', function(argv){
+//         alert("调用成功！现在可以通过右上角按钮分享给朋友或者朋友圈！");
+//         WeixinJSBridge.invoke('shareTimeline', {
+//                 "appid":"",          //appid 设置空就好了。
+//                 "img_url":"",         //分享时所带的图片路径
+//                 "img_width":"120",         //图片宽度
+//                 "img_height":"120",        //图片高度
+//                 "link":"//www.jb51.net",      //分享附带链接地址
+//                 "desc":"极客标签--//www.jb51.net",    //分享内容介绍
+//                 "title":"发现 极客标签 - 做最棒的极客知识分享平台"
+//             }, function(res){/*** 回调函数，最好设置为空 ***/
+//             });
+//     });
+    
+// }
+
+// function hideMenu(){
+//     WeixinJSBridge.call('hideOptionMenu');
+//    }
+
+// if(document.addEventListener){
+//     document.addEventListener('WeixinJSBridgeReady', sendMessage, false); 
+// }else if(document.attachEvent){
+//     document.attachEvent('WeixinJSBridgeReady' , sendMessage); 
+//     document.attachEvent('onWeixinJSBridgeReady' , sendMessage); 
+// }
+   
+//判断网页是否在微信中被调用
+// var ua = navigator.userAgent.toLowerCase();
+// if(ua.match(/MicroMessenger/i)=="micromessenger") {
+// } else {
+//     alert("调用失败，请用微信扫一扫，扫描下面二维码打开网页！");
+// }
+   

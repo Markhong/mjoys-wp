@@ -83,16 +83,16 @@ table {
 	width: 68%;
 	height: 80%;
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxian.png) no-repeat center bottom;
+	background: url(./images/bg-formcarxian.png?v=1) no-repeat center bottom;
 	background-size: contain;
 	position: relative;
 }
 .calc-result {
 	text-align: center;
 	width: 320px;
-	height: 80%;
+	/* height: 80%; */
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxianresult.png) no-repeat center bottom;
+	background: url(./images/bg-formcarxianresult.png?v=1) no-repeat center 40px;
 	background-size: contain;
 	position: relative;
 }
@@ -168,7 +168,7 @@ table {
     transform: translateX(-50%) translateY(-50%);
 }
 .modal#modal-forward {
-	top: 55px;
+	top: 25px;
     -webkit-transform: translateX(-50%) translateY(0%);
     -moz-transform: translateX(-50%) translateY(0%);
     -ms-transform: translateX(-50%) translateY(0%);
@@ -249,22 +249,28 @@ table {
     width: 35px;
 }
 .carinfo {
-	position: absolute;
-    top: 192px;
+	padding-top: 280px;
     text-align: left;
     color: #7157b8;
     font-size: 14px;
-    left: 52px;
+    width: 65%;
+    margin: 0 auto;
 }
 .carinfo > :first-child {
 	margin-bottom: 8px;
 }
 .insuranceinfo {
-	position: absolute;
+	/* position: absolute;
     bottom: 55px;
-    left: 84px;
+	left: 84px; */
+	width: 65%;
+	margin: 0 auto;
+	margin-top: 20px;
 	text-align: left;
 	color: #888e94;
+}
+.insuranceinfo--details:last-child {
+	margin-top: 30px;
 }
 .insuranceinfo .insuranceinfo--title {
 	text-align: center;
@@ -277,9 +283,10 @@ table {
 	margin-bottom: 4px;
 }
 .calc-result .gotowin {
-	position: absolute;
+	/* position: absolute;
     bottom: -100px;
-    left: 0;
+	left: 0; */
+	margin-bottom: 50px;
 }
 
 
@@ -300,7 +307,7 @@ table {
 
 
 .draw {
-    width: 75%;
+    width: 280px;
     /* height: 600px; */
 	margin: 0 auto;
 	height: calc(100% - 20px);
@@ -312,7 +319,7 @@ table {
 }
 .drawContent {
 	position: absolute;
-    bottom: 124px;
+    bottom: 132px;
     left: 50%;
     transform: translateX(-50%);
 }
