@@ -53,19 +53,22 @@ button {
 .main {
     position: absolute;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 .main--home {
-    background-image: url(./images/bg-home.png);
+	background-image: url(./images/bg-home.png);
+	height: 100%;
 }
 .main--calccarxian {
 	background-image: url(./images/bg-calccarxian.png);
+	/* height: 100%; */
 }
 .main--winprize {
 	background-image: url(./images/bg-winprize.png);
+	height: 100%;
 }
 /* main{padding-top: 3em;} */
 table {
@@ -80,27 +83,28 @@ table {
 }
 .form-calc {
 	text-align: center;
-	width: 68%;
-	height: 80%;
+	width: 280px;
+    height: 100%;
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxian.png?v=1) no-repeat center bottom;
+	background: url(./images/bg-formcarxian.png?v=1) no-repeat center 40px;
 	background-size: contain;
 	position: relative;
+}
+#formGetPrice {
+	padding-top: 270px;
 }
 .calc-result {
 	text-align: center;
 	width: 320px;
 	/* height: 80%; */
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxianresult.png?v=1) no-repeat center 40px;
+	background: url(./images/bg-formcarxianresult.jpg?v=2) no-repeat center 40px;
 	background-size: contain;
 	position: relative;
 }
 .form-calc .form {
-	position: absolute;
-	bottom: 20px;
-	left: 14%;
-	width: 72%;
+	width: 200px;
+    margin: 0 auto;
 }
 .main-title img {
     max-width: 100%;
@@ -232,11 +236,9 @@ table {
 	background-image: url(./images/btn-getprice-clicked.png);
 }
 .form-calc-button {
-	position: fixed;
-    bottom: 30px;
 	width: 175px;
-	left: 50%;
-	transform: translateX(-50%);
+	margin: 0 auto;
+    margin-top: 80px;
 }
 #formError .error {
 	display: none;
@@ -249,7 +251,7 @@ table {
     width: 35px;
 }
 .carinfo {
-	padding-top: 280px;
+	padding-top: 230px;
     text-align: left;
     color: #7157b8;
     font-size: 14px;

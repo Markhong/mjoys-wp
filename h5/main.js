@@ -49,7 +49,7 @@ var lottery = {
 
 var click = false;
 var prizeTime = 0;
-var ifShared = false;
+var ifShared = true;
 
 function roll() {
     lottery.times += 1;
@@ -104,7 +104,8 @@ window.onload = function() {
     lottery.init('lottery');
     $('.draw-btn').click(function() {
         
-        if (getCookies('prizeTime') !=='' && parseInt(getCookies('prizeTime')) >= 1 && !ifShared) {
+        // if (getCookies('prizeTime') !=='' && parseInt(getCookies('prizeTime')) >= 1 && !ifShared) {
+        if (getCookies('prizeTime') !=='' && parseInt(getCookies('prizeTime')) >= 1) {
             $('#modal-prizeTimesEnd').addClass('modal--show');
             return;
         }
@@ -136,6 +137,22 @@ window.onload = function() {
 
     var errorTime = 0;
     $("#formGetPrice").submit(function(){
+        var reg_carcode = /(^[京津沪渝冀豫云辽黑湘皖鲁新苏浙赣鄂桂甘晋蒙陕吉闽贵粤青藏川宁琼使领A-Z]{1}[A-Z]{1}[A-Z0-9]{4}[A-Z0-9挂学警港澳]{1}$)/;
+        $carcode = $("#carcode");
+        if (!reg_carcode.test($carcode.val().toUpperCase())) {
+            $carcode.focus();
+            alert('请输入正确的车牌号。');
+            return false;
+        }
+
+        var reg_tel = /^1[0-9]{10}$/;
+        $tel = $("#tel");
+        if (!reg_tel.test($tel.val())) {
+            $tel.focus();
+            alert('请输入正确的手机号。');
+            return false;
+        }
+
         var data = {};
         data.insurance = $('#carcode').val();
         data.name = $('#name').val();
@@ -162,6 +179,19 @@ window.onload = function() {
                 
             },
             success: function (response) {
+                var userdata = {};
+                userdata.carcode = $('#carcode').val();
+                userdata.name = $('#name').val();
+                userdata.tel = $('#tel').val();
+                userdata.action = "getPriseUser_action";
+                $.ajax({
+                    url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
+                    data: userdata,
+                    type: "POST",
+                    success: function (data) {
+                    }
+                });
+
                 if (response.data === null) {
                     errorTime++;
                     $("#waitingforprice").removeClass('modal--show');
@@ -194,7 +224,7 @@ window.onload = function() {
                 // alert(objResponseData['PICC'].biDiscount);
                 $('#carInfo-number').html(response.data.insurance);
                 var myDate = new Date();
-                $('#carInfo-date').html(myDate.getFullYear()+'.'+myDate.getMonth() + 1 +'.'+myDate.getDate() + ' - ' + (parseInt(myDate.getFullYear())+1)+'.'+myDate.getMonth()+'.'+myDate.getDate());
+                $('#carInfo-date').html(myDate.getFullYear()+'.'+ (parseInt(myDate.getMonth()) + 1) +'.'+myDate.getDate() + ' - ' + (parseInt(myDate.getFullYear())+1)+'.'+(parseInt(myDate.getMonth()) + 1)+'.'+myDate.getDate());
                 
                 for(var i in objResponseData) {
                     $('.insuranceinfo').append('<div class="insuranceinfo--details">' +
@@ -211,34 +241,7 @@ window.onload = function() {
             }
         });
         //https://batman.mjoys.com/open/bat/shanghai/getFee?insurance=%E6%B2%AAGC9262&name=%E6%9D%8E%E6%98%8E&mobile=13811238989
-        // $.ajax({
-        //     url: "http://www.mjoys.com/wp-admin/admin-ajax.php",
-        //     data: data,
-        //     type: "POST",
-        //     beforeSend: function () {
-        //         $("#waitingforprice").toggleClass('modal--show');
-        //         $('.modal-overlay').unbind('click');
-        //     },
-        //     error: function (request) {
-        //         errorTime++;
-        //         $("#waitingforprice").removeClass('modal--show');
-        //         $("#formError").addClass('modal--show');
-        //         if (errorTime == 1) {
-        //             $("#formError #form-error1").show();
-        //             $("#formError #form-error2").hide();
-        //         } else {
-        //             $("#formError #form-error2").show();
-        //             $("#formError #form-error1").hide();
-        //         }
-                
-        //     },
-        //     success: function (data) {
-        //         // $('#adusername').val("");
-        //         // $('#ademail').val("");
-        //         // $('#adtel').val("");
-        //         // $('#adurl').val("");
-        //     }
-        // });
+        
         return false;
     });
 
