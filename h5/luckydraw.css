@@ -135,7 +135,7 @@ table {
     width: 100%;
     height: 55px;
 	background-position: center;
-	margin-top: 50px;
+	margin-top: 70px;
 }
 .gotowin:active {
 	background-image: url(./images/btn-gotowin-clicked.png);
@@ -155,6 +155,7 @@ table {
 	position: absolute;
 	top: 25px;
 	right: 23px;
+	z-index: 9999;
 }
 .modal {
     position: fixed;
@@ -255,7 +256,7 @@ table {
     text-align: left;
     color: #7157b8;
     font-size: 14px;
-    width: 65%;
+    width: 75%;
     margin: 0 auto;
 }
 .carinfo > :first-child {
@@ -267,12 +268,12 @@ table {
 	left: 84px; */
 	width: 65%;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 35px;
 	text-align: left;
 	color: #888e94;
 }
 .insuranceinfo--details:last-child {
-	margin-top: 40px;
+	margin-top: 35px;
 }
 .insuranceinfo .insuranceinfo--title {
 	text-align: center;
@@ -288,7 +289,7 @@ table {
 	/* position: absolute;
     bottom: -100px;
 	left: 0; */
-	margin-bottom: 50px;
+	/* margin-bottom: 70px; */
 }
 
 
