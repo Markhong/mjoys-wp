@@ -98,7 +98,7 @@ table {
 	width: 320px;
 	/* height: 80%; */
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxianresult.jpg?v=2) no-repeat center 40px;
+	background: url(./images/bg-formcarxianresult.png?v=3) no-repeat center 40px;
 	background-size: contain;
 	position: relative;
 }
@@ -251,7 +251,7 @@ table {
     width: 35px;
 }
 .carinfo {
-	padding-top: 230px;
+	padding-top: 280px;
     text-align: left;
     color: #7157b8;
     font-size: 14px;
@@ -267,12 +267,12 @@ table {
 	left: 84px; */
 	width: 65%;
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 40px;
 	text-align: left;
 	color: #888e94;
 }
 .insuranceinfo--details:last-child {
-	margin-top: 30px;
+	margin-top: 40px;
 }
 .insuranceinfo .insuranceinfo--title {
 	text-align: center;
