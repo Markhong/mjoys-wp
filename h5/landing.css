@@ -59,15 +59,15 @@ button {
 	background-position: center;
 }
 .main--home {
-	background-image: url(./images/bg-home.png);
+	background-image: url(https://www.mjoys.com/wp-content/uploads/bg-home.png);
 	height: 100%;
 }
 .main--calccarxian {
-	background-image: url(./images/bg-calccarxian.png);
+	background-image: url(https://www.mjoys.com/wp-content/uploads/bg-calccarxian.png);
 	/* height: 100%; */
 }
 .main--winprize {
-	background-image: url(./images/bg-winprize.png);
+	background-image: url(https://www.mjoys.com/wp-content/uploads/bg-winprize.png);
 	height: 100%;
 }
 /* main{padding-top: 3em;} */
@@ -86,7 +86,7 @@ table {
 	width: 280px;
     height: 100%;
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxian.png?v=1) no-repeat center 40px;
+	background: url(https://www.mjoys.com/wp-content/uploads/bg-formcarxian.png?v=1) no-repeat center 40px;
 	background-size: contain;
 	position: relative;
 }
@@ -98,7 +98,7 @@ table {
 	width: 320px;
 	/* height: 80%; */
 	margin: 0 auto 45px;
-	background: url(./images/bg-formcarxianresult.png?v=3) no-repeat center 40px;
+	background: url(https://www.mjoys.com/wp-content/uploads/bg-formcarxianresult-min.png?v=3) no-repeat center 40px;
 	background-size: contain;
 	position: relative;
 }
@@ -110,7 +110,7 @@ table {
     max-width: 100%;
 }
 .main-prize {
-    background: url(./images/bg-prize.png) no-repeat;
+    background: url(https://www.mjoys.com/wp-content/uploads/bg-prize.png) no-repeat;
     background-size: contain;
     background-position: center;
     width: 70%;
@@ -119,7 +119,7 @@ table {
     position: relative;
 }
 .gotocalc {
-    background: url(./images/btn-calc.png) no-repeat;
+    background: url(https://www.mjoys.com/wp-content/uploads/btn-calc.png) no-repeat;
     background-size: contain;
     width: 100%;
     margin: 0 auto;
@@ -130,7 +130,7 @@ table {
     bottom: 32px;
 }
 .gotowin {
-    background: url(./images/btn-gotowin.png) no-repeat;
+    background: url(https://www.mjoys.com/wp-content/uploads/btn-gotowin.png) no-repeat;
     background-size: contain;
     width: 100%;
     height: 55px;
@@ -138,10 +138,10 @@ table {
 	margin-top: 70px;
 }
 .gotowin:active {
-	background-image: url(./images/btn-gotowin-clicked.png);
+	background-image: url(https://www.mjoys.com/wp-content/uploads/btn-gotowin-clicked.png);
 }
 .gotoforward {
-	background: url(./images/btn-forward.png) no-repeat;
+	background: url(https://www.mjoys.com/wp-content/uploads/btn-forward.png) no-repeat;
     background-size: contain;
     width: 100%;
     height: 55px;
@@ -149,7 +149,7 @@ table {
 	margin-top: 70px;
 }
 .gotoforward:active {
-	background-image: url(./images/btn-forward-clicked.png);
+	background-image: url(https://www.mjoys.com/wp-content/uploads/btn-forward-clicked.png);
 }
 .help {
 	position: absolute;
@@ -225,7 +225,7 @@ table {
     visibility: visible;
 }
 .btn-getprice {
-    background: url(./images/btn-getprice.png) no-repeat;
+    background: url(https://www.mjoys.com/wp-content/uploads/btn-getprice.png) no-repeat;
     background-size: contain;
     width: 100%;
     margin: 0 auto;
@@ -234,7 +234,7 @@ table {
     background-position: center;
 }
 .btn-getprice:active {
-	background-image: url(./images/btn-getprice-clicked.png);
+	background-image: url(https://www.mjoys.com/wp-content/uploads/btn-getprice-clicked.png);
 }
 .form-calc-button {
 	width: 175px;
@@ -278,7 +278,7 @@ table {
 .insuranceinfo .insuranceinfo--title {
 	text-align: center;
 	color: #697bff;
-	background: url(./images/bg-title.png) no-repeat center bottom;
+	background: url(https://www.mjoys.com/wp-content/uploads/bg-title.png) no-repeat center bottom;
 	padding-bottom: 16px;
 	margin-bottom: 14px;
 }
@@ -315,7 +315,7 @@ table {
 	margin: 0 auto;
 	height: calc(100% - 20px);
 	padding:50px;
-    background-image: url(./images/plat-winprize.png);
+    background-image: url(https://www.mjoys.com/wp-content/uploads/plat-winprize.png);
     background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center bottom;
@@ -333,58 +333,58 @@ table {
     background-size: 100%;
 }
 .draw .item.lottery-unit-0 {
-	background-image: url(images/bg1.png?v=1);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg1.png?v=1);
 }
 .draw .item.lottery-unit-1 {
-	background-image: url(images/bg2.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg2.png);
 }
 .draw .item.lottery-unit-2 {
-	background-image: url(images/bg3.png?v=1);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg3.png?v=1);
 }
 .draw .item.lottery-unit-3 {
-	background-image: url(images/bg4.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg4.png);
 }
 .draw .item.lottery-unit-4 {
-	background-image: url(images/bg5.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg5.png);
 }
 .draw .item.lottery-unit-5 {
-	background-image: url(images/bg6.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg6.png);
 }
 .draw .item.lottery-unit-6 {
-	background-image: url(images/bg7.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg7.png);
 }
 .draw .item.lottery-unit-7 {
-	background-image: url(images/bg8.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg8.png);
 }
 
 .draw .item.active {
-    /* background-image: url(images/bg2.png); */
+    /* background-image: url(http://www.mjoys.com/wp-content/uploads/bg2.png); */
     background-repeat: no-repeat;
     background-size: 100%;
 }
 .draw .item.active.lottery-unit-0 {
-	background-image: url(images/bg1-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg1-active.png);
 }
 .draw .item.active.lottery-unit-1 {
-	background-image: url(images/bg2-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg2-active.png);
 }
 .draw .item.active.lottery-unit-2 {
-	background-image: url(images/bg3-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg3-active.png);
 }
 .draw .item.active.lottery-unit-3 {
-	background-image: url(images/bg4-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg4-active.png);
 }
 .draw .item.active.lottery-unit-4 {
-	background-image: url(images/bg5-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg5-active.png);
 }
 .draw .item.active.lottery-unit-5 {
-	background-image: url(images/bg6-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg6-active.png);
 }
 .draw .item.active.lottery-unit-6 {
-	background-image: url(images/bg7-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg7-active.png);
 }
 .draw .item.active.lottery-unit-7 {
-	background-image: url(images/bg8-active.png);
+	background-image: url(http://www.mjoys.com/wp-content/uploads/bg8-active.png);
 }
 
 .draw .img {
@@ -421,7 +421,7 @@ table {
     font-size: 25px;
     font-weight: 700; */
     text-decoration: none;
-    background-image: url(images/bg9.png);
+    background-image: url(http://www.mjoys.com/wp-content/uploads/bg9.png);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -802,4 +802,8 @@ body .layui-m-layer .layui-m-layer-msg {
 }
 .form #carcode {
     text-transform: uppercase;
+}
+.form__note {
+	font-size:12px;
+	color: #7157b8;
 }
