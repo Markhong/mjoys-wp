@@ -126,11 +126,11 @@ window.onload = function() {
         $("#" + dataModal).toggleClass('modal--show');
     });
     $('.gotocalc').click(function() {
-        window.location.href="https://www.mjoys.com/activity-landing-99-2/?ifInnernal=1";
+        window.location.href="https://www.mjoys.com/activity-landing-99-2/";
     });
     $('.gotowin').click(function() {
-        // setCookies('ifFromNormal', 1, 30);
-        window.location.href="https://www.mjoys.com/activity-landing-99-3/?ifInnernal=1";
+        setCookies('ifFromNormal', 1, 30);
+        window.location.href="https://www.mjoys.com/activity-landing-99-3/";
     });
     $('.modal-overlay').click(function() {
         $('.modal--show').toggleClass('modal--show');
@@ -184,7 +184,7 @@ window.onload = function() {
                 userdata.carcode = $('#carcode').val();
                 userdata.name = $('#name').val();
                 userdata.tel = $('#tel').val();
-                data.ifSuccessGetPrice = true;
+                userdata.ifSuccessGetPrice = true;
                 userdata.action = "getPriseUser_action";
                 
 
@@ -199,7 +199,7 @@ window.onload = function() {
                         $("#formError #form-error2").show();
                         $("#formError #form-error1").hide();
                     }
-                    data.ifSuccessGetPrice = false;
+                    userdata.ifSuccessGetPrice = false;
                     return;
                 }
 
@@ -270,10 +270,8 @@ function getQueryStringByName(name){
 }
 
 $(function() {
-    if (getQueryStringByName('ifInnernal') == '' && 
-        (window.location.href.toLowerCase().indexOf('activity-landing-99-2') > 0 || 
-            window.location.href.toLowerCase().indexOf('activity-landing-99-3') > 0)
-        ) {
+    if (getCookies('ifFromNormal') == '' && 
+            window.location.href.toLowerCase().indexOf('activity-landing-99-3') > 0) {
         window.location.href = 'https://www.mjoys.com/activity-landing-99-1/';
     }    
 
