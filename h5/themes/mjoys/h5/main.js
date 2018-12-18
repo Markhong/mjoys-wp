@@ -62,7 +62,7 @@ function roll() {
             layer.open({
                 type: 1,			           
                 shadeClose: true,
-                shade: false,
+                shade: true,
                 maxmin: true, //开启最大化最小化按钮
                 area: ['793px', '600px'],
                 content: !ifShared ? $("#info2").html() : $("#info").html()
@@ -126,11 +126,11 @@ window.onload = function() {
         $("#" + dataModal).toggleClass('modal--show');
     });
     $('.gotocalc').click(function() {
-        window.location.href="https://www.mjoys.com/activity-landing-99-2/";
+        window.location.href="https://www.mjoys.com/activity-landing-99-2/?ifInnernal=1";
     });
     $('.gotowin').click(function() {
-        setCookies('ifFromNormal', 1, 30);
-        window.location.href="https://www.mjoys.com/activity-landing-99-3/";
+        // setCookies('ifFromNormal', 1, 30);
+        window.location.href="https://www.mjoys.com/activity-landing-99-3/?ifInnernal=1";
     });
     $('.modal-overlay').click(function() {
         $('.modal--show').toggleClass('modal--show');
@@ -184,14 +184,9 @@ window.onload = function() {
                 userdata.carcode = $('#carcode').val();
                 userdata.name = $('#name').val();
                 userdata.tel = $('#tel').val();
+                data.ifSuccessGetPrice = true;
                 userdata.action = "getPriseUser_action";
-                $.ajax({
-                    url: "https://www.mjoys.com/wp-admin/admin-ajax.php",
-                    data: userdata,
-                    type: "POST",
-                    success: function (data) {
-                    }
-                });
+                
 
                 if (response.data === null) {
                     errorTime++;
@@ -204,8 +199,18 @@ window.onload = function() {
                         $("#formError #form-error2").show();
                         $("#formError #form-error1").hide();
                     }
+                    data.ifSuccessGetPrice = false;
                     return;
                 }
+
+                $.ajax({
+                    url: "https://www.mjoys.com/wp-admin/admin-ajax.php",
+                    data: userdata,
+                    type: "POST",
+                    success: function (data) {
+                    }
+                });
+
                 //https://batman.mjoys.com/bat/open/shanghai/getFee?insurance=%E6%B2%AAGC9262&name=%E6%9D%8E%E6%98%8E&mobile=13811238989
                 //CPIC: {totalPremium: "2885.61", biPremium: "1635.61", ciPremium: "950.00", vehicleTaxPremium: "300.00", biDiscount: "0.4225"}
                 //PICC: {totalPremium: "2885.61", biPremium: "1635.61", ciPremium: "950.00", vehicleTaxPremium: "300.00", biDiscount: "0.4225"}
@@ -224,7 +229,7 @@ window.onload = function() {
                 $('.calc-result').show();
                 // alert(objResponseData['PICC'].biDiscount);
                 $('#carInfo-number').html(response.data.insurance);
-                var myDate = new Date();
+                var myDate = new Date(JSON.parse(response.data.data)[0].biStartDate);
                 $('#carInfo-date').html(myDate.getFullYear()+'.'+ (parseInt(myDate.getMonth()) + 1) +'.'+myDate.getDate() + ' - ' + (parseInt(myDate.getFullYear())+1)+'.'+(parseInt(myDate.getMonth()) + 1)+'.'+myDate.getDate());
                 
                 for(var i in objResponseData) {
@@ -256,9 +261,19 @@ window.onload = function() {
     
 };
 
+function getQueryStringByName(name){
+    var result = location.search.match(new RegExp("[\?\&]" + name+ "=([^\&]+)","i"));
+    if(result == null || result.length < 1){
+        return "";
+    }
+    return result[1];
+}
+
 $(function() {
-    if (getCookies('ifFromNormal') === '' && 
-        window.location.href.toLowerCase().indexOf('activity-landing-99-3') > 0) {
+    if (getQueryStringByName('ifInnernal') == '' && 
+        (window.location.href.toLowerCase().indexOf('activity-landing-99-2') > 0 || 
+            window.location.href.toLowerCase().indexOf('activity-landing-99-3') > 0)
+        ) {
         window.location.href = 'https://www.mjoys.com/activity-landing-99-1/';
     }    
 

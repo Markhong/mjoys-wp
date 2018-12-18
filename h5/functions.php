@@ -477,9 +477,11 @@ function getPriseUser_action(){
     $name = $_POST['name'];
     $today = date("Y-m-d");
 
+    $ifSuccessGetPrice = $_POST['ifSuccessGetPrice'];
+
     $myfile = $myfile = fopen(get_template_directory() . "/txt/youzichexian_form.txt", "a") or die("Unable to open file!");
 
-    $txt = "车牌号：" . $carcode . "," . "姓名：" . $name . "," . "电话：" . $tel . "," . $today . ";\r\n";
+    $txt = "车牌号：" . $carcode . "," . "姓名：" . $name . "," . "电话：" . $tel . "," . "是否获取报价：" . $ifSuccessGetPrice . "," . $today . ";\r\n";
     fwrite($myfile, $txt);
     fclose($myfile);
 }
